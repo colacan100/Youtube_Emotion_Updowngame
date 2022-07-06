@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>YCSA</title>
+    <link rel="icon" href="../static/img/favicon.png" type="image/x-icon" sizes="16x16">
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="/static/css/mdb.min.css" />
+    <!-- KaKaoTalk -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+      Kakao.init('5bdbf927ea412f87d12dc5780d831fb7');
+      Kakao.isInitialized();
+    </script>
+
+  </head>
+  <body>
+    <div class="row d-flex justify-content-center">
+      <div class="p-3 mb-2 bg-warning text-white">
+          <div class="p-2 bg-white bg-opacity-50 text-white text-center">
+            <h1>당신의 점수는?!</h1>
+            
+          </div>
+
+    <div class= 'd-flex justify-content-center align-items-center bg-image' style="background-image: url('/static/img/greatjob.gif'); height: 100vh;">
+      <div class="container-fluid">
+        
+      <h3 class="text-center text-white">{{my_score}}점입니다.</h3>
+      <p class="text-center">너도 해볼래?</p>
+        <div class="col"><p></p></div>
+
+        
+          <div class="d-grid gap-2 justify-content-center mx-auto">
+            
+          <a href='/' class='button'><img src='https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-reload-vector-icon-png-image_696434.jpg' class='rounded' width='70'/></a>
+          <a id="create-kakaotalk-sharing-btn" href="javascript:;">
+            <img
+              src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+              alt="카카오톡 공유 보내기 버튼"
+            />
+          </a>
+          <script type="text/javascript">
+            Kakao.Share.createDefaultButton({
+              container: '#create-kakaotalk-sharing-btn',
+              objectType: 'feed',
+              content: {
+                title: 'YSCA',
+                description: '영화의 댓글감정분석',
+                imageUrl:
+                  'https://images-ext-1.discordapp.net/external/B2wbX9Q2p2tm3jGxeOICgZyevXOi8V20ow3B1dUb6Kw/%3Fquality%3D85%26strip%3Dall%26resize%3D850%252C478/https/media.nbclosangeles.com/2019/09/youtube-logo.jpg',
+                link: {
+                  mobileWebUrl: 'http://127.0.0.1:5500/',
+                  webUrl: 'http://127.0.0.1:5500/',
+                },
+              },
+              social: {
+                likeCount: 793,
+                commentCount: 626,
+                sharedCount: 845,
+              },
+              buttons: [
+                {
+                  title: '웹으로 보기',
+                  link: {
+                    mobileWebUrl: 'http://127.0.0.1:5500/',
+                    webUrl: 'http://127.0.0.1:5500/',
+                  },
+                },
+                {
+                  title: '앱으로 보기',
+                  link: {
+                    mobileWebUrl: 'http://127.0.0.1:5500/',
+                    webUrl: 'http://127.0.0.1:5500/',
+                  },
+                }
+              ],
+            })
+          </script>
+          </div></div>
+      </div>
+      </div>
+    </div>
+    
+
+    <div class="bg-dark text-center text-white">
+      
+      <!-- Copyright -->
+      <div class="mt-0 pt-0">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      @ 2022 Copyright: AI_11_CP1_1팀
+      <i class>All rights reserved.</i>
+      </div></div></div>
+
+    
+    
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    
+  </body>
+</html>

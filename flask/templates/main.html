@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>YCSA</title>
+    <link rel="icon" href="../static/img/favicon.png" type="image/x-icon" sizes="16x16">
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="../static/css/mdb.min.css" />
+  </head>
+
+<body>
+
+    <div class="row d-flex justify-content-center">
+        <div class="p-3 mb-2 bg-primary bg-opacity-50 text-white">
+            <div class="p-2 bg-white bg-opacity-25 text-white text-center">
+              <h1>영화의 댓글 중 <span style='color:red;'>[{{emotion_}}]</span> 의 감정은 어느쪽이 높을까요?!</h1>
+              
+            </div>
+
+    <div class="row d-flex justify-content-center">
+        <div style="margin-bottom: 10px;">
+            <p></p>
+            <h3 class="float-end">현재 점수 : {{my_score}}, 진행 상황 : {{cnt}}/5</h3>
+        </div></div>
+
+        <main style="user-select: auto;">    
+            <div class='row'>
+                <div class = "col-6">
+                <div class="text-center" style="user-select: auto;">
+                <div class="bg-image">
+                    <img class='img-fluid mx-auto' src="{{image1}}" alt="Left image"/>
+                    <div class="mask mx-auto" style="background-color: rgba(0, 0, 0, 0.6)">
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                            <h1>{{movie1}}<br>{{movie1_emotion}}%</h1>
+                    </div></div>
+                </div></div></div>
+                
+                <div class = "col-6">
+                <div class="text-center" style="user-select: auto;">
+                <div class="bg-image">
+                    <img src="{{image2}}" class='img-fluid' alt="Right image"/>
+                    <div class="mask mx-auto" style="background-color: rgba(0, 0, 0, 0.6)">
+                        <div class="d-flex justify-content-center align-items-center h-100">    
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <h1>{{movie2}}</h1>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-lg btn-outline-danger btn-rounded btn-info active" data-mdb-ripple-color="red" role="button" aria-pressed="true" data-mdb-toggle="modal" data-mdb-target="#exampleModal">더 많아 &#9652;</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            <div style="color:black; background-color:white;">정답은?!</div>
+                                        </h5>
+                                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div style="color:black; background-color:white;">{{movie2}}: {{movie2_emotion}}%</div>
+                                        </div>
+                                      <div class="modal-footer">
+                                          <a href="{{url_for('main', cnt=cnt, my_score=my_score, ans='up', emotion_=emotion_, movie1_emotion=movie1_emotion, movie2_emotion=movie2_emotion)}}" type="button" class="btn btn-lg btn-outline-danger btn-rounded btn-info active" data-mdb-ripple-color="red" role="button" aria-pressed="true">확인</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-lg btn-outline-primary btn-rounded btn-info active" data-mdb-ripple-color="blue" role="button" aria-pressed="true" data-mdb-toggle="modal" data-mdb-target="#exampleModal">더 적어 &#9660;</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            <div style="color:black; background-color:white;">정답은?!</div>
+                                        </h5>
+                                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                            <div style="color:black; background-color:white;">{{movie2}}: {{movie2_emotion}}%</div>
+                                        </div>
+                                      <div class="modal-footer">
+                                          <a href="{{url_for('main', cnt=cnt, my_score=my_score, ans='down', emotion_=emotion_, movie1_emotion=movie1_emotion, movie2_emotion=movie2_emotion)}}" type="button" class="btn btn-lg btn-outline-primary btn-rounded btn-info active" data-mdb-ripple-color="blue" role="button" aria-pressed="true">확인</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                    </div></div></div>
+                </div></div></div>
+            </div> 
+
+        </main>
+                    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous" style="user-select: auto;"></script>
+                    <script type="text/javascript" src="../static/js/mdb.min.js"></script>
+        </div>
+    </div>
+
+    <div class="bg-dark text-center text-white">
+        <!-- Copyright -->
+        <div class="mt-0 pt-0">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        @ 2022 Copyright: AI_11_CP1_1팀
+        <i class>All rights reserved.</a>
+        </div></div>
+    </div>
+    <!-- MDB -->
+    <script type="text/javascript" src="../static/js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+
+</body>
+</html>
+
