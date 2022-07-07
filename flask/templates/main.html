@@ -52,20 +52,20 @@
                                 <h1>{{movie2}}</h1>
 
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-lg btn-outline-danger btn-rounded btn-info active" data-mdb-ripple-color="red" role="button" aria-pressed="true" data-mdb-toggle="modal" data-mdb-target="#exampleModal">더 많아 &#9652;</button>
+                                <button type="button" class="btn btn-lg btn-outline-danger btn-rounded btn-info active" data-mdb-ripple-color="red" role="button" aria-pressed="true" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">더 많아 &#9652;</button>
                                 <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1" aria-hidden="true">
                                   <div class="modal-dialog">
                                     <div class="modal-content">
                                       <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">
+                                        <h5 class="modal-title" id="exampleModal1">
                                             <div style="color:black; background-color:white;">정답은?!</div>
                                         </h5>
                                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
                                         <div style="color:black; background-color:white;">{{movie2}}: {{movie2_emotion}}%</div>
-                                        </div>
+                                      </div>
                                       <div class="modal-footer">
                                           <a href="{{url_for('main', cnt=cnt, my_score=my_score, ans='up', emotion_=emotion_, movie1_emotion=movie1_emotion, movie2_emotion=movie2_emotion)}}" type="button" class="btn btn-lg btn-outline-danger btn-rounded btn-info active" data-mdb-ripple-color="red" role="button" aria-pressed="true">확인</a>
                                       </div>
@@ -73,20 +73,20 @@
                                   </div>
                                 </div>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-lg btn-outline-primary btn-rounded btn-info active" data-mdb-ripple-color="blue" role="button" aria-pressed="true" data-mdb-toggle="modal" data-mdb-target="#exampleModal">더 적어 &#9660;</button>
+                                <button type="button" class="btn btn-lg btn-outline-primary btn-rounded btn-info active" data-mdb-ripple-color="blue" role="button" aria-pressed="true" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">더 적어 &#9660;</button>
                                 <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2" aria-hidden="true">
                                   <div class="modal-dialog">
                                     <div class="modal-content">
                                       <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">
+                                        <h5 class="modal-title" id="exampleModal2">
                                             <div style="color:black; background-color:white;">정답은?!</div>
                                         </h5>
                                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
                                             <div style="color:black; background-color:white;">{{movie2}}: {{movie2_emotion}}%</div>
-                                        </div>
+                                      </div>
                                       <div class="modal-footer">
                                           <a href="{{url_for('main', cnt=cnt, my_score=my_score, ans='down', emotion_=emotion_, movie1_emotion=movie1_emotion, movie2_emotion=movie2_emotion)}}" type="button" class="btn btn-lg btn-outline-primary btn-rounded btn-info active" data-mdb-ripple-color="blue" role="button" aria-pressed="true">확인</a>
                                       </div>
